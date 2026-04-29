@@ -1,2 +1,2 @@
-# Sonic-Whatever-Ground
+# Sonic-XS-Widescreen
 yes.
