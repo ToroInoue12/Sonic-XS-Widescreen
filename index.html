@@ -3,26 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Sonic XS Widescreen</title>
+    <link rel="icon" type="image/png" href="https://github.com/ToroInoue12/Sonic-XS-Widescreen/blob/main/sonicx.png?raw=true">
+    
     <style>
-        /* stop looking at my easter eggs */
         body, html { 
-            margin: 0; 
-            padding: 0; 
-            height: 100%; 
-            background-color: #000; 
-            display: flex;          
-            justify-content: center; 
-            align-items: center;     
-            overflow: hidden; 
+            margin: 0; padding: 0; height: 100%; background-color: #000; 
+            display: flex; justify-content: center; align-items: center; overflow: hidden; 
         }
-        
-        #ruffle { 
-            width: 95vw;  
-            height: 95vh; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        #ruffle { width: 95vw; height: 95vh; display: flex; justify-content: center; align-items: center; }
     </style>
 </head>
 <body>
@@ -34,11 +22,8 @@
             const ruffle = window.RufflePlayer.newest();
             const player = ruffle.createPlayer();
             document.getElementById("ruffle").appendChild(player);
-            
-           
             player.style.width = "100%";
             player.style.height = "100%";
-            
             player.load("Sonic_Xs.swf");
         });
     </script>
