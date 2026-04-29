@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <title>My Drive - Google Drive</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #000; }
-        #ruffle { width: 100vw; height: 100vh; }
+        /* stop looking at my easter eggs */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            background-color: #000; 
+            display: flex;          
+            justify-content: center; 
+            align-items: center;     
+            overflow: hidden; 
+        }
+        
+        #ruffle { 
+            width: 95vw;  /* Slightly less than full width to keep it clean */
+            height: 95vh; /* Slightly less than full height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -17,7 +34,11 @@
             const ruffle = window.RufflePlayer.newest();
             const player = ruffle.createPlayer();
             document.getElementById("ruffle").appendChild(player);
-            // easter egg oh my
+            
+            // Ensures the player stays centered and scales correctly
+            player.style.width = "100%";
+            player.style.height = "100%";
+            
             player.load("Sonic_Xs.swf");
         });
     </script>
